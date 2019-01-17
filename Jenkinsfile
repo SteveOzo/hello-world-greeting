@@ -41,7 +41,7 @@ node('docker_prod') {
         ./startup.sh''';
     }
 
-    stage ('Deploy){
+    stage ('Deploy'){
         unstash 'binary'
         sh 'cp target/hello-0.0.1.war /home/jenkins/tomcat/webapps/';
     }
